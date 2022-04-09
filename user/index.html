@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<link rel="stylesheet" href="./css/barchart.css">
+	<script src="https://d3js.org/d3.v6.min.js">
+
+	</script>
+
+
+	<!-- Code from P1 -->
+	<title>Fitness tracker</title>
+	<link href="./css/reset.css" rel="stylesheet" type="text/css" />
+	<link href="./css/examples.css" rel="stylesheet" type="text/css" />
+	<link rel="preconnect" href="https://fonts.gstatic.com">
+	<link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+	<script defer type="module" src="./js/examples.js">
+
+	</script>
+</head>
+
+<body>
+	<header>
+		<div class="header_div">
+			<div class="header_tractivity-logo_section">
+				<img src="./images/tractivity-logo-white.png" alt="tractivity-logo-white.png">
+			</div>
+			<div class="header_logout_section">
+        <a href="auth/logout">
+			    <button class="logout_btn" id="logout_btn">Logout</button>
+        </a>
+			</div>
+		</div>
+	</header>
+
+	<div class="mainBoard">
+		<div class="welcome">
+			<h1> Welcome back, <br> <span id="username">Joey</span>!</h1>
+			<img id="picture" src="images/header image.png">
+		</div>
+
+		<p id="activityPrompt">What activity session are you logging?</p>
+
+		<section class="reminder">
+			<div class="reminderBox" id="reminderBox">
+				<p id="reminderText">Reminder</p>
+				<p id="activityQuestion">Did you <span id="remindAct">Haha</span> <span id="redmindActDate">DATE</span>?</p>
+				<button id="yesText">Yes</p>
+					<button id="noText">No</p>
+			</div>
+		</section>
+
+		<section class="past">
+			<h2 id="pastActLabel">Past Activity</h2>
+			<button id="viewProBtn">View Progress</button>
+			<div class="pastBox">
+				<p id="pastFeedback"> Got it!
+					<span class="emphasize">
+						<span class="emphasize" id="pastAct">Bike</span> for
+						<span class="emphasize" id="actAmount">5</span>
+						<span class="emphasize" id="actUnit">Miles</span>.
+					</span>
+					Keep it up!
+				</p>
+
+				<button class="addNew" id="pastbtn">Add New Activity</button>
+
+				<div id="formPast">
+					<div class="datePicker">
+						<label for="Date">Date</label>
+						<input type="date" id="pastDate">
+					</div>
+
+					<div class="activity">
+						<label for="Activity">Activity</label>
+						<select name="activity" id="pastActivity">
+							<option value="Walk">Walk</option>
+							<option value="Run">Run</option>
+							<option value="Swim">Swim</option>
+							<option value="Yoga">Yoga</option>
+							<option value="Soccer">Soccer</option>
+							<option value="Basketball">Basketball</option>
+						</select>
+					</div>
+
+					<div>
+						<p id="forText">for</p>
+					</div>
+
+
+					<div id="workload">
+						<label for="workload">Time/Distance</label>
+						<input type="number" id="workloadPast" min="0">
+					</div>
+
+					<div id="workUnit">
+						<label for="workunits">Units</label>
+						<input type="text" id="workunitsPast" value="Miles">
+					</div>
+
+					<button class="submitBtn" id="pastSubmit">Submit</button>
+				</div>
+
+			</div>
+		</section>
+
+		<section class="future">
+			<h2> Future Plans </h2>
+			<div class="futureBox">
+				<p id="futureFeedback"> Sounds good! Don't forget to come back to update your session for
+					<span class="emphasize">
+						<span class="emphasize" id="futureAct">Bike</span>
+						on
+						<span class="emphasize" id="futureDay">04/03/21</span>!
+					</span>
+				</p>
+
+				<button class="addNew" id="futurebtn">Add New Activity</button>
+
+				<div id="formFuture">
+					<div class="datePicker">
+						<label for="Date">Date</label>
+						<input type="date" id="futureDate">
+					</div>
+
+					<div class="activity">
+						<label for="Activity">Activity</label>
+						<select name="activity" id="futureActivity">
+							<option value="Walk">Walk</option>
+							<option value="Run">Run</option>
+							<option value="Swim">Swim</option>
+							<option value="Yoga">Yoga</option>
+							<option value="Soccer">Soccer</option>
+							<option value="Basketball">Basketball</option>
+						</select>
+					</div>
+
+					<button class="submitBtn" id="futureSubmit">Submit</button>
+				</div>
+			</div>
+		</section>
+
+
+	</div>
+
+  <div id="overlay">
+    <div id="overlay_center_area">
+      <div id="overlay_close_btn_section">
+        <button id="overlay_close_btn">&#10005</button>
+      </div>
+
+      <div id="view_progress_form">
+        <div id="view_activity_for_div">
+          <label for="view_activity_for" id="view_activity_for_label">View activity for:</label>
+          <select id="view_activity_for" class="view_progress_form_input">
+            <option value="Walk">Walk</option>
+            <option value="Run">Run</option>
+            <option value="Swim">Swim</option>
+            <option value="Yoga">Yoga</option>
+            <option value="Soccer">Soccer</option>
+            <option value="Basketball">Basketball</option>
+          </select>
+        </div>
+
+        <div id="weekending_div">
+          <label for="weekending" id="weekending_label">Week ending:</label>
+          <input type="date" id="weekending" class="view_progress_form_input">
+        </div>
+
+        <button class="goBtn" id="goBtn">Go</button>
+      </div>
+      
+      <div id="progress_chart_div">
+        <script type="module" src="./js/examples.js"></script>  
+        <div id='chart-anchor'></div>
+      </div>
+	  </div>
+  </div>
+
+
+</body>
+</html>

@@ -1,0 +1,592 @@
+body {
+  margin: auto;
+  font-family: "Open Sans", sans-serif;
+  min-width: 300px;
+} 
+
+h1 {
+  font-size: 3em;
+  font-weight: 800;
+}
+
+h2 {
+  font-size: 1.9em;
+  font-weight: 800;
+}
+
+/* header set */
+header {
+  background-color: #333;
+  color: #fff;
+  padding: 20px 50px;
+  min-height: 40px;
+  display: flex;
+  flex-flow: row;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.header_div {
+  display: flex;
+  flex-flow: row;
+  justify-content: space-between;
+  align-items: center;
+  height: 100%;
+  width: 100%;
+}
+
+.header_tractivity-logo_section {
+  display: flex;
+  flex-flow: row;
+  justify-content: center;
+  align-items: center;
+  width: 30%;
+  height: 100%;
+}
+
+.header_tractivity-logo_section img {
+  width: 100%;
+  height: 100%;
+}
+
+.logout_btn {
+  font-family: "Open Sans", sans-serif;
+  font-weight: bold;
+  margin-right: 30px;
+}
+
+.header_logout_section {
+  display: flex;
+  flex-flow: row;
+  justify-content: center;
+  align-items: center;
+  width: 10%;
+  height: 85%;
+}
+
+.header_logout_section button {
+  font-size: 130%;
+  background-color: #333333;
+  color: #fff;
+  width: 100%;
+  height: 100%;
+}
+
+
+
+.emphasize {
+  font-family: "Open Sans", sans-serif;
+  font-weight: 700;
+}
+
+/* button setting */
+.addNew {
+  height: 35px;
+  padding: 0px 15px;
+  border-radius: 1.5em;
+  font-weight: bold;
+  background-color: #fff;
+  box-shadow: 5px 5px 5px rgba(59, 56, 56, 0.212);
+  font-size: small;
+  font-weight: 700;
+}
+
+.submitBtn {
+  height: 35px;
+  padding: 0px 25px;
+  border-radius: 1.5em;
+  font-weight: bold;
+  background-color: #333333;
+  color: #fff;
+  box-shadow: 5px 5px 5px rgba(59, 56, 56, 0.212);
+  font-size: small;
+  font-weight: 700;
+  margin-top: 35px;
+  margin-bottom: 15px;
+  margin-left: 15px;
+}
+
+#viewProBtn {
+  height: 35px;
+  margin-left: 15px;
+  padding: 0px 15px;
+  border-radius: 1.5em;
+  font-weight: bold;
+  background-color: #333333;
+  box-shadow: 5px 5px 5px rgba(59, 56, 56, 0.212);
+  font-size: small;
+  font-weight: 700;
+  color: #f2f2f2;
+}
+
+/* *********** set for reminder section *********** */
+.reminderBox {
+  display: none;
+  flex-flow: row wrap;
+  justify-content: flex-start;
+  align-items: center;
+
+  background-color: #5267D9;
+  text-align: center;
+  min-height: 60px;
+  margin-top: 8px;
+  margin-bottom: 25px;
+  max-width: 1800px;
+  
+}
+
+#reminderText {
+  font-family: "Open Sans", sans-serif;
+  font-size:1.3em;
+  font-weight: 900;
+  font-style: italic;
+  margin: 0px 25px;
+}
+
+#activityQuestion {
+  font-family: "Open Sans", sans-serif;
+  font-size:1.1em;
+  font-weight: 500;
+  margin: 0px 25px;
+  color: #f2f2f2;
+}
+
+#yesText {
+  font-family: "Open Sans", sans-serif;
+  font-size:1em;
+  font-weight: 500;
+  margin: 0px 25px;
+  background-color: #5267D9;
+  text-decoration: underline;
+  color: #f2f2f2;
+}
+
+#noText {
+  font-family: "Open Sans", sans-serif;
+  font-size:1em;
+  font-weight: 500;
+  margin: 0px 25px;
+  background-color: #5267D9;
+  text-decoration: underline;
+  color: #f2f2f2;
+}
+/* **************** end reminder section **************** */
+
+
+
+/* *********** set for past activity section *********** */
+.past {
+  margin-top: 10px;
+}
+
+.pastBox {
+  display: flex;
+  flex-flow: column wrap;
+  justify-content: center;
+  align-items: center;
+
+  background-color: #53e0cd;
+  text-align: center;
+  min-height: 160px;
+  border-radius: 2em;
+  margin-top: 8px;
+  margin-bottom: 25px;
+}
+
+label {
+  font-family: "Open Sans", sans-serif;
+  font-size: 1.3em;
+  font-weight: 800;
+  align-self: flex-start;
+}
+
+#pastActLabel {
+  display: inline;
+}
+
+/* 1. Flex affects only its first-level children, 
+so the tags in form won't be affected. 
+   2. We need to change the form tag and the content hierarchy
+   because the text and the input is on the same line.*/
+ #formPast {
+  display: flex  ;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center; 
+  align-items: center; 
+  } 
+
+.datePicker {
+  display: flex;
+  flex-direction: column;
+  margin: 10px;
+}
+
+.activity {
+  display: flex;
+  flex-direction: column;
+  margin: 10px;
+}
+
+#forText {
+  font-size: 1.5em;
+  font-weight: bold;
+  font-family: "Open Sans", sans-serif;
+  margin-top: 15px;
+}
+
+#workload {
+  display: flex;
+  flex-direction: column;
+  margin: 10px;
+}
+
+#workUnit {
+  display: flex;
+  flex-direction: column;
+  margin: 10px;
+}
+
+/* style for the input content */
+#pastDate {
+  padding:5px 15px;
+  font-family: "Open Sans", sans-serif;
+  font-size: larger;
+  font-weight: 600;
+}
+
+#pastActivity {
+  padding:5px 15px;
+  font-family: "Open Sans", sans-serif;
+  font-size: larger;
+  font-weight: 600;
+}
+
+#workloadPast {
+  padding:5px 15px;
+  font-family: "Open Sans", sans-serif;
+  font-size: larger;
+  font-weight: 600;
+}
+
+#workunitsPast {
+  padding:5px 15px;
+  font-family: "Open Sans", sans-serif;
+  font-size: larger;
+  font-weight: 600;
+  background-color: #fff;
+}
+
+#pastFeedback {
+  font-family: "Open Sans", sans-serif;
+  font-size: larger;
+  margin-bottom: 10px;
+}
+
+
+/* **************** end Past Activity **************** */
+
+
+
+/* *********** set for future plans section ************ */
+.futureBox {
+  display: flex;
+  flex-flow: column wrap;
+  justify-content: center;
+  align-items: center;
+
+  background-color: #b1bab9;
+  text-align: center;
+  min-height: 160px;
+  border-radius: 2em;
+  margin-top: 8px;
+  margin-bottom: 25px;
+}
+
+/* style for the input content */
+#futureDate {
+  padding:5px 15px;
+  font-family: "Open Sans", sans-serif;
+  font-size: larger;
+  font-weight: 600;
+}
+
+#futureActivity {
+  padding:5px 15px;
+  font-family: "Open Sans", sans-serif;
+  font-size: larger;
+  font-weight: 600;
+}
+
+#formFuture {
+  display: flex  ;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center; 
+  align-items: center; 
+}
+
+.datePicker {
+  display: flex;
+  flex-direction: column;
+  margin: 10px;
+}
+
+#futureFeedback {
+  font-family: "Open Sans", sans-serif;
+  font-size: larger;
+  margin-bottom: 10px;
+}
+/* **************** end Future Plans **************** */
+
+
+/* **************** set for welcome section *************** */
+.welcome {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
+  margin: 15px 0px;
+}
+
+.welcome h1 {
+  font-family: "Open Sans";
+  font-size: 60.8px;
+  font-weight: 800;
+  /* margin: 60px 30px 30px 0px; */
+  /* margin-right: 20px; */
+}
+
+/* header image setting */
+.welcome img {
+  
+  width: 50%;
+  height: fit-content;
+  /* set min-width */
+  min-width: 250px;
+
+  /* shift the picture to right a little bit */
+  margin-left: 40px;
+}
+/* ****************** end welecome section ***************** */
+
+.mainBoard {
+  display: flex;
+  flex-direction: column;
+  width: 88%;
+  margin: auto;
+  padding-bottom: 30px;
+  max-width: 1800px;
+}
+
+#activityPrompt {
+  font-family: "Open Sans", sans-serif;
+  font-size: 1.4em;
+  font-weight: 600;
+}
+
+@media (max-width: 480px) {
+  .welcome h1 {
+    font-family: "Open Sans", sans-serif;
+    font-size: 2em;
+    font-weight: 800;
+  }
+
+  h2 {
+    font-family: "Open Sans", sans-serif;
+    font-size: 1.5em;
+    font-weight: 800;
+  }
+
+  #formPast {
+    display: flex  ;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  #forText {
+      margin-left: 10px;
+  }
+
+  #pastSubmit {
+    padding: 0px 60px;
+    align-self: center;
+    margin: 20px 0px;
+  }
+
+  #formFuture {
+    display: flex  ;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  #futureSubmit {
+    padding: 0px 60px;
+    align-self: center;
+    margin: 20px 0px;
+  }
+}
+
+/* ****************** start overlay section ***************** */
+#overlay {
+  display: none;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0,0,0,0.5);
+  justify-content: center;
+  align-items: center;
+}
+
+#overlay_center_area {
+  width: 90%;
+  /* height: 90%; */
+  background-color: #F2F2F2;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#overlay_close_btn_section {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  align-self: flex-end;
+}
+
+
+#overlay_close_btn {
+  color: #333333;
+  background-color: #F2F2F2;
+  font-size: 20px;
+  margin: 10px 20px; 
+}
+
+
+
+#view_progress_form {
+  height: 10%;
+  width: 90%;
+  display: flex;
+  flex-flow: row wrap;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+#view_activity_for_div{
+  display: flex;
+  flex-direction: row;
+  justify-content:flex-start;
+  align-content: center;
+  
+}
+
+#weekending_div{
+  display: flex;
+  flex-direction: row;
+  justify-content:flex-start;
+  align-content: center;
+  
+}
+
+#view_activity_for_label{
+  font-size: 100%;
+  font-weight: 500;
+}
+
+#weekending_label {
+  font-size: 100%;
+  font-weight: 500;
+  
+}
+
+.view_progress_form_input {
+  margin-left: 20px;
+}
+
+#goBtn {
+  border-radius: 1.5em;
+  padding: 0px 25px;
+  font-weight: bold;
+  background-color: #333333;
+  box-shadow: 5px 5px 5px rgba(59, 56, 56, 0.212);
+  font-size: 100%;
+  color: #f2f2f2;
+  margin: 10px 10px;
+  align-self: center;
+}
+
+#progress_chart_div{
+  width: 90%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-content: flex-end;
+}
+
+#chart-anchor{
+  width: 100%;
+  padding: 5%;
+}
+
+@media (max-width: 680px) {
+  #view_progress_form {
+    height: 20%;
+    width: 100%;
+    display: flex;
+    flex-flow: column wrap;
+    align-items: flex-start;
+    justify-content: space-between;
+    padding-left: 10%;
+  }
+
+  #view_activity_for_div{
+    display: flex;
+    flex-direction: row;
+    justify-content:space-evenly;
+    align-content: center;
+    width: 100%;
+    margin-bottom:2px; 
+  }
+
+  #weekending_div{
+    display: flex;
+    flex-direction: row;
+    justify-content:space-evenly;
+    align-content: center;
+    width: 100%;
+  }
+
+  #weekending_label::before {
+    content: "For ";
+    font-size: 100%;
+    font-weight: 500;
+  }
+
+  .view_progress_form_input {
+    margin-left: 5%;
+    width: 30%;
+  }
+
+  #goBtn {
+    border-radius: 1.5em;
+    padding: 0px 25px;
+    font-weight: bold;
+    background-color: #333333;
+    box-shadow: 5px 5px 5px rgba(59, 56, 56, 0.212);
+    font-size: 100%;
+    color: #f2f2f2;
+    margin: 10px 10px;
+    align-self: center;
+  }
+
+    .header_tractivity-logo_section img {
+    width: 120px;
+    height: 25px;
+  }
+}
+
+/* ****************** end overlay section ***************** */
